@@ -4,7 +4,7 @@ This repository contains examples of web scraping scripts written in Python. The
 
 ## Installation
 
-1. Clone the repository: `git clone https://github.com/your_username/web-scrapping.git`
+1. Clone the repository: `git clone https://github.com/Adebowale-Morakinyo/web-scrapping.git`
 2. Install the required libraries: `pip install -r requirements.txt`
 
 ## Usage
@@ -23,6 +23,10 @@ Replace `<search_terms>` with the search terms you want to search for. The scrip
 ### Google Search Results
 
 The `google_search_results.py` script opens the top 5 search results from Google search in your default web browser. To use the script, provide the search terms as command line arguments.
+
+## Warning
+
+n this implementation, if we get a 429 status code, indicating that we've sent too many requests, we wait for 10 seconds before retrying the request. This should help avoid hitting Google's rate limit. However, it's important to note that even with a delay, using web scraping to get search results from Google is against their terms of service and could potentially lead to your IP being banned. This is just for educational purpose.
 
 ## Contributing
 

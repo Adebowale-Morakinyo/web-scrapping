@@ -2,6 +2,7 @@ import requests
 import sys
 import webbrowser
 import bs4
+import time
 
 # check if command line arguments are provided
 if len(sys.argv) < 2:
@@ -28,3 +29,4 @@ for i in range(num_links):
     url = 'http://google.com' + link_elems[i].get('href')
     print('Opening:', url)
     webbrowser.open(url)
+    time.sleep(1)  # add a delay of 1 second between requests to prevent rate limiting
